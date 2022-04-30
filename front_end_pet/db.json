@@ -1,0 +1,64 @@
+{
+  "entities": [
+    {
+      "id": 1,
+      "Name": "Cat",
+      "City": "Agartala",
+      "Address": "Kalyani, Dhaleshwar, Agartala-799001",
+      "Capacity": 10,
+      "CostPerDay": 5000,
+      "Verified": "true",
+      "Rating": 4
+    },
+    {
+      "id": 2,
+      "Name": "Dog",
+      "City": "Kolkata",
+      "Address": "Eden Garden, Kolkata-3004283",
+      "Capacity": 10,
+      "CostPerDay": 8000,
+      "Verified": "true",
+      "Rating": 5
+    },
+    {
+      "id": 3,
+      "Name": "Teddy",
+      "City": "NY",
+      "Address": "Eden Garden, NY-3004283",
+      "Capacity": 8,
+      "CostPerDay": 12000,
+      "Verified": "false",
+      "Rating": 3
+    },
+    {
+      "id": 4,
+      "Name": "Doreamon",
+      "City": "Tokyo",
+      "Address": "Osunamaka Garden, Tokyo-3004283",
+      "Capacity": 15,
+      "CostPerDay": 4000,
+      "Verified": "true",
+      "Rating": 9
+    },
+    {
+      "id": 5,
+      "Name": "Nobita",
+      "City": "Osaka",
+      "Address": "Eden Garden, Osaka-675628",
+      "Capacity": 3,
+      "CostPerDay": 3000,
+      "Verified": "false",
+      "Rating": 7
+    },
+    {
+      "id": 2,
+      "Name": "Cat",
+      "City": "Kolkata",
+      "Address": "Dharmatala, Kolkata-3004283",
+      "Capacity": 20,
+      "CostPerDay": 2000,
+      "Verified": "true",
+      "Rating": 5
+    }
+  ]
+}
