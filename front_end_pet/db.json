@@ -1,64 +1,59 @@
 {
   "entities": [
     {
-      "id": 1,
-      "Name": "Cat",
-      "City": "Agartala",
-      "Address": "Kalyani, Dhaleshwar, Agartala-799001",
-      "Capacity": 10,
-      "CostPerDay": 5000,
-      "Verified": "true",
-      "Rating": 4
+      "name": "Teddy",
+      "city": "Agartala",
+      "address": "Dhaleshwar, Agartala-799004",
+      "capacity": "10",
+      "costperday": "2000",
+      "verified": "true",
+      "rating": "8",
+      "imageUrl": "https://media.istockphoto.com/photos/agartala-in-tripura-india-picture-id1292258648?k=20&m=1292258648&s=612x612&w=0&h=y3alJBf905MrQLddN_w3J2Y5oKv9hSlJ--1-3h8545I=",
+      "id": 1
     },
     {
-      "id": 2,
-      "Name": "Dog",
-      "City": "Kolkata",
-      "Address": "Eden Garden, Kolkata-3004283",
-      "Capacity": 10,
-      "CostPerDay": 8000,
-      "Verified": "true",
-      "Rating": 5
+      "name": "Cat",
+      "city": "Kolkata",
+      "address": "Eden Garden, Kolkata-677212",
+      "capacity": "20",
+      "costperday": "1000",
+      "verified": "false",
+      "rating": "5",
+      "imageUrl": "https://media.istockphoto.com/photos/howrah-bridge-on-river-ganges-at-kolkata-at-twilight-with-moody-sky-picture-id1164386039?b=1&k=20&m=1164386039&s=170667a&w=0&h=A_AyiNsKJq45RG5RBo9JJPc2rB3UvAMj1ZWr7QQuVL4=",
+      "id": 2
     },
     {
-      "id": 3,
-      "Name": "Teddy",
-      "City": "NY",
-      "Address": "Eden Garden, NY-3004283",
-      "Capacity": 8,
-      "CostPerDay": 12000,
-      "Verified": "false",
-      "Rating": 3
+      "name": "Dog",
+      "city": "Bangalore",
+      "address": "Koramangala, Bangalore - 355007",
+      "capacity": "10",
+      "costperday": "3000",
+      "verified": "true",
+      "rating": "8",
+      "imageUrl": "https://media.istockphoto.com/photos/bangalore-skyline-india-picture-id186255464?b=1&k=20&m=186255464&s=170667a&w=0&h=o5vlTaX9BDzxi29IgbXzxOwDcvdzp2vKjFUE0nTlS9g=",
+      "id": 3
     },
     {
-      "id": 4,
-      "Name": "Doreamon",
-      "City": "Tokyo",
-      "Address": "Osunamaka Garden, Tokyo-3004283",
-      "Capacity": 15,
-      "CostPerDay": 4000,
-      "Verified": "true",
-      "Rating": 9
+      "name": "Rabbit",
+      "city": "Kolkata",
+      "address": "Dharmashala, Kolkata-366543",
+      "capacity": "12",
+      "costperday": "1500",
+      "verified": "false",
+      "rating": "6",
+      "imageUrl": "https://images.unsplash.com/photo-1558431382-27e303142255?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8a29sa2F0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "id": 4
     },
     {
-      "id": 5,
-      "Name": "Nobita",
-      "City": "Osaka",
-      "Address": "Eden Garden, Osaka-675628",
-      "Capacity": 3,
-      "CostPerDay": 3000,
-      "Verified": "false",
-      "Rating": 7
-    },
-    {
-      "id": 2,
-      "Name": "Cat",
-      "City": "Kolkata",
-      "Address": "Dharmatala, Kolkata-3004283",
-      "Capacity": 20,
-      "CostPerDay": 2000,
-      "Verified": "true",
-      "Rating": 5
+      "name": "Cat",
+      "city": "Mumbai",
+      "address": "Dadar, Mumbai-435879",
+      "capacity": "15",
+      "costperday": "3000",
+      "verified": "true",
+      "rating": "3",
+      "imageUrl": "https://media.istockphoto.com/photos/taj-mahal-hotel-and-gateway-of-india-picture-id539018660?b=1&k=20&m=539018660&s=170667a&w=0&h=irjhakIneb9Z21X3tRnz_6i8Lhrwyn4Ju28nBIal9tk=",
+      "id": 5
     }
   ]
 }

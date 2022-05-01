@@ -1,64 +1,141 @@
-import { Box, Button, Card, CardContent, Grid, TextField } from "@mui/material";
+import { Button, Card, CardContent, Grid, TextField } from "@mui/material";
+import { useState } from "react";
+import axios from "axios";
 
 export const CreateEntity = () => {
+  const [form, setForm] = useState({
+    name: "",
+    city: "",
+    address: "",
+    capacity: "",
+    costperday: "",
+    verified: "",
+    rating: "",
+    imageUrl: "",
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setForm({ ...form, [id]: value });
+    console.log("form: ", form);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:8080/entities", form).then(() => {
+      alert(`${form.name} added`);
+      setForm({
+        name: "",
+        city: "",
+        address: "",
+        capacity: "",
+        costperday: "",
+        verified: "",
+        rating: "",
+        imageUrl: "",
+      });
+    });
+  };
+
   return (
     <>
       <h2>Create Your Entity</h2>
 
-      <Card style={{maxWidth:400, margin: '0 auto'}} >
+      <Card style={{ maxWidth: 400, margin: "0 auto" }}>
         <CardContent>
-          <form>
+          <form onSubmit={handleSubmit}>
             <Grid container spacing={1}>
               <Grid xs={24} sm={12} item>
                 <TextField
                   label="Name"
+                  value={form.name}
                   placeholder="Enter your pet name"
-                  fullwidth
+                  fullWidth
+                  onChange={handleChange}
+                  id="name"
                 />
               </Grid>
               <Grid xs={24} sm={12} item>
                 <TextField
                   label="City"
+                  value={form.city}
                   placeholder="Enter your City"
-                  fullwidth
+                  onChange={handleChange}
+                  fullWidth
+                  id="city"
                 />
               </Grid>
-              <Grid xs={24} sm={12}item>
+              <Grid xs={24} sm={12} item>
                 <TextField
                   label="Address"
+                  value={form.address}
                   placeholder="Enter your Address"
-                  fullwidth
+                  onChange={handleChange}
+                  fullWidth
+                  id="address"
                 />
               </Grid>
               <Grid xs={24} sm={12} item>
                 <TextField
                   type="number"
                   label="Capacity"
+                  value={form.capacity}
                   placeholder="Enter Capacity"
-                  fullwidth
+                  onChange={handleChange}
+                  fullWidth
+                  id="capacity"
                 />
               </Grid>
               <Grid xs={24} sm={12} item>
                 <TextField
                   type="number"
                   label="Cost Per Day"
+                  value={form.costperday}
                   placeholder="Enter Cost/Day"
-                  fullwidth
+                  onChange={handleChange}
+                  fullWidth
+                  id="costperday"
                 />
               </Grid>
-              <Grid xs={24} sm={12}item>
-                <TextField label="Varified" placeholder="Varified" fullwidth />
+              <Grid xs={24} sm={12} item>
+                <TextField
+                  label="Verified"
+                  value={form.verified}
+                  placeholder="Verified"
+                  fullWidth
+                  onChange={handleChange}
+                  id="verified"
+                />
               </Grid>
-              <Grid xxs={24} sm={12}item>
+              <Grid xs={24} sm={12} item>
                 <TextField
                   type="number"
                   label="Rating"
+                  value={form.rating}
                   placeholder="Rating"
-                  fullwidth
+                  onChange={handleChange}
+                  fullWidth
+                  id="rating"
                 />
               </Grid>
-              <Grid xs={12} sm={6}>
-                <Button type="submit" variant="contained" fullWidth style={{margin: '5px 96px', padding: '10px 20px'}}>
+              <Grid xs={24} sm={12} item>
+                <TextField
+                  type="url"
+                  label="Image Url"
+                  value={form.imageUrl}
+                  placeholder="Enter Image"
+                  onChange={handleChange}
+                  fullWidth
+                  id="imageUrl"
+                />
+              </Grid>
+              <Grid>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  fullWidth
+                  style={{ margin: "5px 10px", padding: "12px 146px" }}
+                >
                   Submit
                 </Button>
               </Grid>
