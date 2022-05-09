@@ -1,6 +1,8 @@
 import { Button, Card, CardContent, Grid, TextField } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addEntity } from "../../Redux/action";
 
 export const CreateEntity = () => {
   const [form, setForm] = useState({
@@ -14,6 +16,8 @@ export const CreateEntity = () => {
     imageUrl: "",
   });
 
+  const dispatch = useDispatch();
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setForm({ ...form, [id]: value });
@@ -21,6 +25,7 @@ export const CreateEntity = () => {
   };
 
   const handleSubmit = (e) => {
+    dispatch(addEntity(form));
     e.preventDefault();
     axios.post("http://localhost:8080/entities", form).then(() => {
       alert(`${form.name} added`);

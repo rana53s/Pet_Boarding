@@ -28,7 +28,7 @@ export const HomePage = () => {
       setEntity([...res.data]);
     });
   };
-  // let history = useHistory();
+
 
   const handleSort = (sortBy, order) => {
     if (sortBy === "costperday" && order === 1)
@@ -45,30 +45,30 @@ export const HomePage = () => {
       setEntity((prev) => [...prev.sort((a, b) => b.rating - a.rating)]);
   };
 
-  const handleFilter = (type) => {
-    let arr = [];
+  // const handleFilter = (type) => {
+  //   let arr = [];
 
-    if (type === "agt") {
-      axios.get("http://localhost:8080/entities").then((res) => {
-        res.data.map((el) => {
-          if (el.city === "Agartala") {
-            arr.push(el);
-          }
-        });
-      });
-      setEntity(arr);
-    }
-    else if (type === "kol") {
-      axios.get("http://localhost:8080/entities").then((res) => {
-        res.data.map((el) => {
-          if (el.city === "Kolkata") {
-            arr.push(el);
-          }
-        });
-      });
-      setEntity(arr);
-    }
-  };
+  //   if (type === "agt") {
+  //     axios.get("http://localhost:8080/entities").then((res) => {
+  //       res.data.map((el) => {
+  //         if (el.city === "Agartala") {
+  //           arr.push(el);
+  //         }
+  //       });
+  //     });
+  //     setEntity(arr);
+  //   }
+  //   else if (type === "kol") {
+  //     axios.get("http://localhost:8080/entities").then((res) => {
+  //       res.data.map((el) => {
+  //         if (el.city === "Kolkata") {
+  //           arr.push(el);
+  //         }
+  //       });
+  //     });
+  //     setEntity(arr);
+  //   }
+  // };
 
   return (
     <>
@@ -113,20 +113,21 @@ export const HomePage = () => {
         <div style={{ display: "flex" }}>
           <Box width="150px">
             <TextField label="Filter By City" select fullWidth>
-              <MenuItem value="agt" onClick={() => handleFilter("agt")}>
+              <MenuItem value="agt">
                 Agartala
               </MenuItem>
-              <MenuItem value="kol" onClick={() => handleFilter("kol")}>
+              {/* onClick={() => handleFilter("kol")} */}
+              <MenuItem value="kol" >
                 Kolkata
               </MenuItem>
             </TextField>
           </Box>
           <Box width="150px">
             <TextField label="Filter by Verified" select fullWidth>
-              <MenuItem value="true" onClick={() => handleFilter("true")}>
+              <MenuItem value="true">
                 true
               </MenuItem>
-              <MenuItem value="false" onClick={() => handleFilter("false")}>
+              <MenuItem value="false">
                 false
               </MenuItem>
             </TextField>
@@ -156,9 +157,6 @@ export const HomePage = () => {
               <TableRow
                 key={row.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                // onClick={() => {
-                //   history.push(`/listing/${row.id}`);
-                // }}
               >
                 <TableCell align="center">{row.id}</TableCell>
                 <TableCell align="center">{row.name}</TableCell>

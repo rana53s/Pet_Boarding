@@ -16,7 +16,7 @@ export const IndividualEntity = () => {
     imageUrl: "",
   });
 
-  useEffect(() => getData(), [id]);
+  useEffect(() => getData(), []);
 
   const getData = () => {
     axios.get(`http://localhost:8080/entities/${id}`).then((res) => {
@@ -40,9 +40,7 @@ export const IndividualEntity = () => {
             <Typography gutterBottom variant="h4" component="div">
               {entity.city}
             </Typography>
-            <Typography variant="h5">
-              {entity.address}
-            </Typography>
+            <Typography variant="h5">{entity.address}</Typography>
             <Typography variant="h6">Cost/day : {entity.costperday}</Typography>
             <Typography variant="h6">Capacity : {entity.capacity}</Typography>
             <Typography variant="h6">Verified: {entity.verified}</Typography>
